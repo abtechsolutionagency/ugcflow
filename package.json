@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "NEXT_DISABLE_ESLINT=1 NEXT_DISABLE_TYPECHECK=1 next dev --turbopack",
-    "dev:backend": "npm run dev --prefix backend",
-    "dev:all": "npm run dev --prefix backend & npm run dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "node init && NEXT_DISABLE_ESLINT=1 NEXT_DISABLE_TYPECHECK=1 next dev --turbopack",
+    "dev:backend": "node init && npm run dev --prefix backend",
+    "dev:all": "node init && npm run dev --prefix backend & npm run dev",
+    "build": "node init && next build",
+    "start": "node init && next start",
     "lint": "oxlint",
     "type-check": "tsc --noEmit",
     "check-all": "npm run lint & npm run type-check & wait"
